@@ -27,7 +27,9 @@
         #include <DbgHelp.h>
         EA_RESTORE_ALL_VC_WARNINGS();
         #include <EAStdC/EASprintf.h>
-        #define EAMAIN_HAVE_UNHANDLED_EXCEPTION_FILTER 1
+        #if !defined(EAMAIN_HAVE_UNHANDLED_EXCEPTION_FILTER)
+            #define EAMAIN_HAVE_UNHANDLED_EXCEPTION_FILTER 1
+        #endif
     #endif
 #endif
 
